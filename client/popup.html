@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Interview Helper</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div style="text-align: right; margin-bottom: 5px;">
+    <button id="openSidePanelBtn" style="
+      background: transparent; 
+      border: 1px solid #94a3b8; 
+      color: #64748b; 
+      padding: 4px 8px; 
+      font-size: 0.75rem; 
+      cursor: pointer; 
+      border-radius: 4px;
+      width: auto; 
+      box-shadow: none;
+    ">
+      ◳ Open Side Panel
+    </button>
+  </div>
+
+  <h3 class="title">AI Interview Helper</h3>
+
+  <div class="input-group">
+    <label for="typeSelector" style="font-size: 0.9rem; font-weight: bold;">Mode:</label>
+    <select id="typeSelector" style="margin-bottom: 10px; width: 100%; padding: 5px;">
+      <option value="behavioral">Behavioral (STAR Method)</option>
+      <option value="dsa">DSA / Coding</option>
+      <option value="sql">SQL Query</option>
+      <option value="tech">Technical Concept</option>
+    </select>
+  </div>
+
+  <textarea
+    id="question"
+    placeholder="Speak or type your question here..."
+    rows="4"
+  ></textarea>
+
+  <div class="controls">
+    <button id="micBtn">🎤 Speak</button>
+    <button id="askAI">Get Answer</button>
+  </div>
+
+  <hr />
+
+  <div id="response" class="response">
+    <p class="hint">Answer will appear here…</p>
+  </div>
+
+  <script src="marked.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
